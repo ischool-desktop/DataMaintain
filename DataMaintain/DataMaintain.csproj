@@ -173,6 +173,33 @@
     <EmbeddedResource Include="ActiproSoftware.SQL.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Library\ActiproSoftware.Shared.Net20.dll" />
+    <Content Include="Library\ActiproSoftware.Shared.Net20.xml" />
+    <Content Include="Library\ActiproSoftware.SyntaxEditor.Addons.Web.Net20.dll" />
+    <Content Include="Library\ActiproSoftware.SyntaxEditor.Addons.Web.Net20.xml" />
+    <Content Include="Library\ActiproSoftware.SyntaxEditor.Net20.dll" />
+    <Content Include="Library\ActiproSoftware.SyntaxEditor.Net20.xml" />
+    <Content Include="Library\ActiproSoftware.WinUICore.Net20.dll" />
+    <Content Include="Library\ActiproSoftware.WinUICore.Net20.xml" />
+    <Content Include="Library\Campus.Configuration.dll" />
+    <Content Include="Library\Campus.Configuration.pdb" />
+    <Content Include="Library\FISCA.Authentication.dll" />
+    <Content Include="Library\FISCA.Authentication.pdb" />
+    <Content Include="Library\FISCA.Authentication.xml" />
+    <Content Include="Library\FISCA.Core.dll" />
+    <Content Include="Library\FISCA.Core.pdb" />
+    <Content Include="Library\FISCA.Core.xml" />
+    <Content Include="Library\FISCA.Data.dll" />
+    <Content Include="Library\FISCA.Data.pdb" />
+    <Content Include="Library\FISCA.Data.xml" />
+    <Content Include="Library\FISCA.dll" />
+    <Content Include="Library\FISCA.DSAClient.dll" />
+    <Content Include="Library\FISCA.DSAClient.pdb" />
+    <Content Include="Library\FISCA.DSAClient.xml" />
+    <Content Include="Library\FISCA.pdb" />
+    <Content Include="Library\FISCA.Presentation.dll" />
+    <Content Include="Library\FISCA.Presentation.pdb" />
+    <Content Include="Library\FISCA.Presentation.xml" />
     <Content Include="play_48.png" />
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
