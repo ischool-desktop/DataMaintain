@@ -96,10 +96,11 @@ namespace DataMaintain
 
                 string cmd = GetEditorText();
 
-                if (IsUpdateCommand(cmd))
-                    ExecuteUpdate(cmd);
-                else
-                    ExecuteSelect(cmd);
+                //if (IsUpdateCommand(cmd))
+                //    ExecuteUpdate(cmd);
+                //else
+                //    ExecuteSelect(cmd);
+                ExecuteSelect(cmd);
 
                 SaveCurrentSqlToSettings();
             }
@@ -113,7 +114,37 @@ namespace DataMaintain
         {
             DisplayDataView();
             Stopwatch sw = Stopwatch.StartNew();
-            DisplayDataTable(Program.Query(cmd));
+            DataTable table = new DataTable();
+            try
+            {
+                table = Program.Query(cmd);
+            }
+            catch (FISCA.DSAClient.DSAServerException ex)
+            {
+                var msg = ex.Message;
+                try
+                {
+                    System.Xml.XmlDocument doc = new System.Xml.XmlDocument();
+                    doc.LoadXml(ex.Response);
+                    System.Xml.XmlElement ele = doc.SelectSingleNode("Envelope/Header/DSFault/Fault/Detail") as System.Xml.XmlElement;
+                    if (ele != null)
+                    {
+                        msg += "\n" + ele.InnerText;
+                        if (msg.Length > 400)
+                            msg = msg.Substring(0, 400) + "...";
+                    }
+                }
+                catch { }
+                if (msg.IndexOf("No results were returned by the query.") > 0 || msg.IndexOf("查詢沒有傳回任何結果。") > 0)
+                {
+                    ShowMessageInWindow("No results were returned by the query.");
+                }
+                else
+                {
+                    ErrorForm.Show(msg, ex);
+                }
+            }
+            DisplayDataTable(table);
             ShowMessageInStatusBar(string.Format("花費毫秒：{0}", sw.ElapsedMilliseconds));
         }
 
@@ -256,6 +287,15 @@ namespace DataMaintain
                     return _column_widths[name];
                 else
                     return defaultValue;
+            }
+        }
+
+        private void ContentPanePanel_SizeChanged(object sender, EventArgs e)
+        {
+            if (editor.Height > ContentPanePanel.Height - 50)
+            {
+                editor.Height = ContentPanePanel.Height - 50;
+                ContentPanePanel.Refresh();
             }
         }
     }

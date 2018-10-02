@@ -57,7 +57,7 @@ namespace DataMaintain
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(392, 153);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(392, 287);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -67,7 +67,7 @@ namespace DataMaintain
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(94, 98);
+            this.panel1.Size = new System.Drawing.Size(94, 232);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -89,7 +89,7 @@ namespace DataMaintain
             this.panel2.Controls.Add(this.btnDetail);
             this.panel2.Controls.Add(this.btnConfirm);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 107);
+            this.panel2.Location = new System.Drawing.Point(3, 241);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(386, 43);
             this.panel2.TabIndex = 2;
@@ -125,7 +125,7 @@ namespace DataMaintain
             this.lblMessage.Location = new System.Drawing.Point(103, 0);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Padding = new System.Windows.Forms.Padding(15, 14, 15, 14);
-            this.lblMessage.Size = new System.Drawing.Size(286, 104);
+            this.lblMessage.Size = new System.Drawing.Size(286, 238);
             this.lblMessage.TabIndex = 3;
             this.lblMessage.Text = "這是一個錯誤訊息顯示的地方。";
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -136,10 +136,9 @@ namespace DataMaintain
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnConfirm;
-            this.ClientSize = new System.Drawing.Size(392, 153);
+            this.ClientSize = new System.Drawing.Size(392, 287);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
-            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(800, 464);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(400, 178);

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            ActiproSoftware.SyntaxEditor.Document document1 = new ActiproSoftware.SyntaxEditor.Document();
-            ActiproSoftware.SyntaxEditor.Document document2 = new ActiproSoftware.SyntaxEditor.Document();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            ActiproSoftware.SyntaxEditor.Document document3 = new ActiproSoftware.SyntaxEditor.Document();
+            ActiproSoftware.SyntaxEditor.Document document4 = new ActiproSoftware.SyntaxEditor.Document();
             this.dataView = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.splitter = new DevComponents.DotNetBar.ExpandableSplitter();
             this.msgView = new DataMaintain.ChineseSyntaxEditor();
@@ -46,21 +46,23 @@
             this.ContentPanePanel.Controls.Add(this.splitter);
             this.ContentPanePanel.Controls.Add(this.editor);
             this.ContentPanePanel.Location = new System.Drawing.Point(0, 163);
+            this.ContentPanePanel.MinimumSize = new System.Drawing.Size(0, 200);
             this.ContentPanePanel.Size = new System.Drawing.Size(870, 421);
+            this.ContentPanePanel.SizeChanged += new System.EventHandler(this.ContentPanePanel_SizeChanged);
             // 
             // dataView
             // 
             this.dataView.AllowUserToAddRows = false;
             this.dataView.AllowUserToDeleteRows = false;
             this.dataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataView.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataView.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataView.Location = new System.Drawing.Point(40, 227);
             this.dataView.Name = "dataView";
@@ -108,8 +110,9 @@
             // 
             // msgView
             // 
-            this.msgView.Document = document1;
+            this.msgView.Document = document3;
             this.msgView.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.msgView.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.msgView.Location = new System.Drawing.Point(346, 227);
             this.msgView.Name = "msgView";
             this.msgView.Size = new System.Drawing.Size(278, 145);
@@ -120,8 +123,9 @@
             // 
             this.editor.DataBindings.Add(new System.Windows.Forms.Binding("Size", global::DataMaintain.Properties.Settings.Default, "Size", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.editor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.editor.Document = document2;
+            this.editor.Document = document4;
             this.editor.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.editor.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.editor.Location = new System.Drawing.Point(0, 0);
             this.editor.Name = "editor";
             this.editor.Size = global::DataMaintain.Properties.Settings.Default.Size;
